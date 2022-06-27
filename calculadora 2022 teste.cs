@@ -149,8 +149,6 @@ public class Calculadora
 
         if (a == 0)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Beep();
             Console.WriteLine("Não é uma equação de segundo grau!");
         }
         else
@@ -159,8 +157,6 @@ public class Calculadora
 
             if (delta < 0)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.Beep();
                 Console.WriteLine($"Como delta = {delta:N2}, a equação não possui raízes reais!");
             }
             else
@@ -168,7 +164,6 @@ public class Calculadora
                 x1 = (-b + Math.Sqrt(delta)) / (2 * a);
                 x2 = (-b - Math.Sqrt(delta)) / (2 * a);
 
-                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"x1 = {x1:N2} e x2 = {x2:N2}");
 
 
