@@ -170,5 +170,47 @@ public class Calculadora
             }
         }
     }
+public static string ExibeSair()
+    {
+        Console.Clear();
+        string saida;
+
+        Console.WriteLine("Deseja sair do programa?");
+        Console.WriteLine("S-Sim || N-Não");
+        Console.Write("Escolha uma opção: ");
+        saida = Console.ReadLine()!;
+
+        switch (saida.ToUpper())
+        {
+            case "S":
+
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("\nObrigado por usar meu programa!");
+                Console.ResetColor();
+
+                return saida;
+
+            case "N" or "n":
+                return saida;
+
+                default:
+                return "N";
+        }
+    }
+    public static void ExibeMiniintroduçao()
+    {
+        Console.Clear();
+        Console.WriteLine("-- Sobre o desenvolvedor e seu projeto --\n");
+
+        Console.WriteLine("Meu nome é Jose Felipe, tenho 17 anos e faço curso técnico de Informática, na Etec Adolpho Berezin.");
+
+        Console.WriteLine("O prjeto foi desenvolvido com o intuito de praticar os ensinamentos dados em aula, por a prova os conhecimentos e mostrar nosso esforço aos professores que ministram as aulas de Programação de Computadores (PC)!\n");
+        Console.WriteLine("Saudações aos professores, Ermogenes Palacio e Diego Neri, e um muito obrigado pelos ensinamentos dados em aula, por tirar nossas dúvidas e fazer com que possamos aprender com nossos erros, e assim melhorar cada vez mais.");
+
+
+        Console.WriteLine("Pressione uma tecla para continuar\n");
+        Console.ReadKey();
+    }
+
 }
  

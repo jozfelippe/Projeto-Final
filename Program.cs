@@ -2,7 +2,7 @@
 
 Console.Clear();
 
-Console.WriteLine("--- Calculadora 4 operações ---\n");
+Console.WriteLine("--- Calculadora ---\n");
 
 Console.WriteLine("[+] Soma");
 Console.WriteLine("[-] Subtração");
@@ -11,6 +11,9 @@ Console.WriteLine("[/] Divisão");
 Console.WriteLine("[^] Exponenciação");
 Console.WriteLine("[~] Radiciação");
 Console.WriteLine("[x] Bhaskara");
+Console.WriteLine("[0] Sair");
+Console.WriteLine("[S] Sobre");
+
 
 Console.Write("\nSelecione a operação desejada: ");
 
@@ -46,6 +49,19 @@ switch (opcaoDesejada)
          Calculadora.CalcularBhaskara();
 
         break;
+ case "0":
+        string confirmou = Calculadora.ExibeSair();
+
+        if (confirmou == "N" || confirmou == "n")
+        {
+            opcaoDesejada = "X";
+        }
+        break;
+
+ case "S":
+        Calculadora.ExibeMiniintroduçao();
+        break;
+
     default:
          Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.WriteLine("Opção inválida.");
